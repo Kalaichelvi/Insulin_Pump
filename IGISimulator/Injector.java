@@ -86,7 +86,7 @@ public class Injector extends Thread {
 
 	private void injectGlucagon() {
 		if (auto) {
-			if (sensor.getCurrentBloodSugar() < 90 && testSubject.getInjected() == false) {
+			if (sensor.getCurrentBloodSugar() < 70 && testSubject.getInjected() == false) {
 				B = (testSubject.getA1() - 59.67) / ICR + (testSubject.getMaxBloodsugar() - 90) / ISF;
 				testSubject.glucagonInjected();
 				System.err.println("inject");
@@ -94,7 +94,7 @@ public class Injector extends Thread {
 				System.out.println("glucagon amount injected: " + B);
 			}
 		} else {
-			if (sensor.getCurrentBloodSugar() < 90 && testSubject.getInjected() == false) {
+			if (sensor.getCurrentBloodSugar() < 70 && testSubject.getInjected() == false) {
 				if (enabled) {
 					B = (testSubject.getA1() - 59.67) / ICR + (testSubject.getMaxBloodsugar() - 90) / ISF;
 					testSubject.glucagonInjected();

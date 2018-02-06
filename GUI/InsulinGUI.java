@@ -260,7 +260,7 @@ public class InsulinGUI extends javax.swing.JFrame {
 					jTextArea1.append("\n");
 				}
 			}
-		} else if (s.getReading() < 90 && s.Hinjected() == false) {
+		} else if (s.getReading() < 70 && s.Hinjected() == false) {
 			if (s.getAuto()) {
 				jTextArea1.append(Double.toString(count) + " min: ");
 				jTextArea1.append("glucagon injected");

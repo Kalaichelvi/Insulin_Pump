@@ -261,7 +261,7 @@ public class PatientMode extends javax.swing.JFrame {
 					jTextArea1.append("\n");
 				}
 			}
-		} else if (s.getSensorReading() < 90 && !s.Hinjected()) {
+		} else if (s.getSensorReading() < 70 && !s.Hinjected()) {
 			if (s.getAuto()) {
 				jTextArea1.append(Double.toString(count) + " min: ");
 				jTextArea1.append("glucagon injected");
